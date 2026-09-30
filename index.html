@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Priority Todo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toasts"></div>
+<section id="auth"><h1>✅ My Tasks</h1><p id="amsg"></p>
+<input id="em" type="email" placeholder="Email" autocomplete="email">
+<input id="pw" type="password" placeholder="Password (6+ characters)" autocomplete="current-password">
+<div class="row"><button class="add" id="si">Sign in</button><button class="icon" id="su">Create account</button></div></section>
+<main id="app">
+<header><h1>✅ My Tasks</h1><div><span id="sync" class="lab"></span> <button class="icon" id="bell" aria-label="Enable notifications">🔔</button> <button class="icon" id="out" aria-label="Sign out">Sign out</button> <button class="icon" id="mode" aria-label="Toggle mode">🌙</button></div></header>
+<div class="prog"><div id="bar"></div></div>
+<div class="count"><span id="count"></span><button class="clear" id="clr">Clear completed</button></div>
+<form id="f">
+<div class="w"><input id="t" placeholder="Add a task…" required autocomplete="off"></div>
+<div><label class="lab" for="c">Category</label><input id="c" list="cats" placeholder="e.g. Work" autocomplete="off"><datalist id="cats"></datalist></div>
+<div><label class="lab" for="p">Priority</label><select id="p"><option value="1">High</option><option value="2" selected>Medium</option><option value="3">Low</option></select></div>
+<div><label class="lab" for="d">Due date</label><input id="d" type="date"></div>
+<div><label class="lab" for="h">Due time</label><input id="h" type="time"></div>
+<div class="w"><label class="lab" for="r">Reminder</label><select id="r"><option value="-1">No reminder</option><option value="0">At due time</option><option value="10">10 min before</option><option value="60">1 hour before</option><option value="1440">1 day before</option></select></div>
+<button class="add">Add task</button>
+</form>
+<div class="tools">
+<input id="q" type="search" placeholder="Search…">
+<select id="fc" aria-label="Category filter"><option value="">All categories</option></select>
+<select id="s"><option value="p">Priority</option><option value="d">Due</option><option value="n">Newest</option></select>
+</div>
+<div class="tabs" id="tabs"><button data-f="all" class="on">All</button><button data-f="active">Active</button><button data-f="done">Done</button></div>
+<ul id="list"></ul>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
