@@ -2,6 +2,6 @@
 // The anon/publishable key is safe to publish because row-level security protects the data.
 // NEVER put the service_role key here.
 window.APP_CONFIG = {
-  SUPABASE_URL: "YOUR_SUPABASE_URL",
-  SUPABASE_ANON_KEY: "YOUR_SUPABASE_ANON_KEY"
+  SUPABASE_URL: "https://todo-app.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_bwQ2_wKHTpoZcMXuORB42g_kKFjCzZj"
 };
